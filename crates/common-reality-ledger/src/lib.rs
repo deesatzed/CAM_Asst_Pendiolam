@@ -26,6 +26,41 @@ pub enum LedgerIntegrity {
     TerminalTruncationUnwitnessed,
 }
 
+#[derive(Clone, Debug, PartialEq, Eq)]
+pub struct MerkleCheckpoint {
+    pub leaf_count: u64,
+    pub root: String,
+}
+
+impl MerkleCheckpoint {
+    pub fn from_events(events: &[LedgerEvent]) -> Self {
+        let mut nodes: Vec<String> = events
+            .iter()
+            .map(|event| event.event_hash.clone())
+            .collect();
+        if nodes.is_empty() {
+            return Self {
+                leaf_count: 0,
+                root: hash_node(""),
+            };
+        }
+
+        while nodes.len() > 1 {
+            let mut parents = Vec::with_capacity(nodes.len().div_ceil(2));
+            for pair in nodes.chunks(2) {
+                let right = pair.get(1).unwrap_or(&pair[0]);
+                parents.push(hash_node(&format!("{}|{}", pair[0], right)));
+            }
+            nodes = parents;
+        }
+
+        Self {
+            leaf_count: events.len() as u64,
+            root: nodes.pop().expect("non-empty Merkle nodes"),
+        }
+    }
+}
+
 #[derive(Debug, PartialEq, Eq)]
 pub struct LedgerError(String);
 
@@ -146,6 +181,10 @@ impl Ledger {
             LedgerIntegrity::LocalReplayOnly
         }
     }
+
+    pub fn merkle_checkpoint(&self) -> MerkleCheckpoint {
+        MerkleCheckpoint::from_events(&self.events)
+    }
 }
 
 fn ensure_transition(current: &OperationState, next: &OperationState) -> Result<(), LedgerError> {
@@ -193,4 +232,8 @@ fn hash_event(
     })
     .expect("fixed ledger hash material serializes");
     format!("sha256:{:x}", Sha256::digest(bytes))
+}
+
+fn hash_node(value: &str) -> String {
+    format!("sha256:{:x}", Sha256::digest(value))
 }
