@@ -27,6 +27,15 @@ dependencies = [
 ]
 
 [[package]]
+name = "common-reality-ledger"
+version = "0.1.0"
+dependencies = [
+ "serde",
+ "serde_json",
+ "sha2",
+]
+
+[[package]]
 name = "common-reality-schema"
 version = "0.1.0"
 dependencies = [
