@@ -3,6 +3,10 @@
   "corpus_id": "campus-ai-v1",
   "fixtures": [
     {"id":"packet","path":"packet.json","sha256":"162970b297cec76e4bb6c20d49edbdc3a23da91da9134f47760a56d451f51e4c"},
+    {"id":"source_corpus","path":"source-corpus.json","sha256":"a51372e6aedbb5c7bc4b920f12e955cc38c4b583666c2b32113ab3a38e660d38"},
+    {"id":"expected_invariants","path":"expected-invariants.json","sha256":"54bf19e6a37610e691c5df6301c740673449d6f580c6d1c6d68be5ffe9782299"},
+    {"id":"allowed_presentation_profiles","path":"allowed-presentation-profiles.json","sha256":"3a305a30501e924d52955b96efebfe89d3ad62dbb5193d392f722d25e0075b25"},
+    {"id":"model_swap_cases","path":"model-swap-cases.json","sha256":"51ff4ee11465405f7ac4c5d7adbdf89a889429bfd9ebde0952928dfa6c86fcdc"},
     {"id":"unsupported_addition","path":"attacks/unsupported-addition.json","sha256":"a40ddcd736b24b19825c8fad70f44b549c321db72a439306a566acd9cdc4e3d2"},
     {"id":"material_omission","path":"attacks/material-omission.json","sha256":"74dbd8b05ab944406811cfa9ecca89a273683cbebc7e1a0ea372810b6e267668"},
     {"id":"uncertainty_reduction","path":"attacks/uncertainty-reduction.json","sha256":"73e2a708a7093a9c3c0dfc3040e1d3ec741bd1c124ffe75e9c7f3909346cd57a"},

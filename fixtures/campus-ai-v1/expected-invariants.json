@@ -1,0 +1,12 @@
+{
+  "fixture_kind": "expected_packet_invariants",
+  "invariants": [
+    "one_packet_version_per_deliberation",
+    "claims_evidence_interpretations_values_and_actions_remain_typed",
+    "material_counterevidence_and_uncertainty_remain_visible",
+    "only_declared_presentation_fields_may_affect_a_lens",
+    "minority_reports_survive_aggregation",
+    "consequential_outputs_require_replayable_receipts",
+    "models_cannot_authorize_or_commit_humans"
+  ]
+}

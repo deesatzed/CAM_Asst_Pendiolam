@@ -1,0 +1,19 @@
+{
+  "fixture_kind": "model_vendor_swap_cases",
+  "cases": [
+    {
+      "case_id": "same-packet-two-models",
+      "packet_id": "campus-ai-v1",
+      "provider_a": "synthetic-local-model-a",
+      "provider_b": "synthetic-local-model-b",
+      "required_invariants": ["same_factual_atoms", "same_counterevidence", "same_uncertainty"]
+    },
+    {
+      "case_id": "neutral-baseline-parity",
+      "packet_id": "campus-ai-v1",
+      "provider_a": "synthetic-local-model-a",
+      "provider_b": "deterministic-baseline",
+      "required_invariants": ["declared_omissions", "no_forbidden_profile_use"]
+    }
+  ]
+}

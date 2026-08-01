@@ -64,7 +64,9 @@ git commit -m "build: initialize constitutional schema workspace"
 **Step 1: Write failing tests**
 
 Add tests requiring a manifest schema version, fixture entries with SHA-256
-digests, all named attack classes, and hash equality with fixture bytes.
+digests, the synthetic source corpus, expected invariants, allowed Lens fields,
+model/vendor swap cases, all named attack classes, and hash equality with
+fixture bytes.
 
 **Step 2: Run test to verify it fails**
 
@@ -74,9 +76,9 @@ Expected: missing fixture/manifest or invalid manifest failure.
 
 **Step 3: Write minimal implementation**
 
-Add synthetic Campus AI packet and adversarial JSON fixtures. Add a strict
-manifest parser and SHA-256 verifier. Never use a live web source or model
-output in Gate 0.
+Add synthetic Campus AI packet, source corpus, expected-invariant, Lens-field,
+model-swap, and adversarial JSON fixtures. Add a strict manifest parser and
+SHA-256 verifier. Never use a live web source or model output in Gate 0.
 
 **Step 4: Run tests to verify they pass**
 

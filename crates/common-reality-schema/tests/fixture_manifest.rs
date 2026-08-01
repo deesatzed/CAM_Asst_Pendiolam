@@ -22,3 +22,23 @@ fn frozen_manifest_hashes_the_packet_and_every_required_attack_fixture() {
         );
     }
 }
+
+#[test]
+fn frozen_manifest_includes_every_non_model_gate_zero_contract() {
+    let manifest = verify_fixture_manifest().expect("the Gate 0 manifest must validate");
+
+    for fixture_id in [
+        "source_corpus",
+        "expected_invariants",
+        "allowed_presentation_profiles",
+        "model_swap_cases",
+    ] {
+        assert!(
+            manifest
+                .fixture_ids()
+                .iter()
+                .any(|actual_id| actual_id == fixture_id),
+            "missing required Gate 0 fixture: {fixture_id}"
+        );
+    }
+}

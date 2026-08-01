@@ -1,0 +1,17 @@
+{
+  "fixture_kind": "synthetic_source_corpus",
+  "sources": [
+    {
+      "source_id": "source-assessment-integrity",
+      "title": "Synthetic assessment-integrity memorandum",
+      "role": "supports",
+      "material_claim_labels": ["disclose-assisted-work", "preserve-independent-mastery"]
+    },
+    {
+      "source_id": "source-accessibility",
+      "title": "Synthetic accessibility review",
+      "role": "counterevidence",
+      "material_claim_labels": ["avoid-universal-disclosure-burden", "require-appeal-path"]
+    }
+  ]
+}

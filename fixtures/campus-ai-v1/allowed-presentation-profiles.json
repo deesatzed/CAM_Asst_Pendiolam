@@ -1,0 +1,21 @@
+{
+  "fixture_kind": "allowed_presentation_profiles",
+  "allowed_profile_fields": [
+    "language",
+    "literacy_level",
+    "technical_familiarity",
+    "preferred_length",
+    "modality",
+    "accessibility_needs",
+    "explicitly_selected_examples"
+  ],
+  "prohibited_profile_fields": [
+    "political_affiliation",
+    "personality_score",
+    "emotional_vulnerability",
+    "private_trauma",
+    "consumer_behavior",
+    "predicted_persuadability",
+    "hidden_demographic_inference"
+  ]
+}
