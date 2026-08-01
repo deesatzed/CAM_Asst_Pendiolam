@@ -5,6 +5,14 @@ use std::fmt;
 use std::fs;
 use std::path::{Component, Path, PathBuf};
 
+mod packet;
+
+pub use packet::{
+    validate_packet, ActionOption, Claim, Evidence, Interpretation, MinorityReport,
+    PacketValidationError, Provenance, Scope, SharedRealityPacket, Source, TransformationContract,
+    Uncertainty, ValuePosition,
+};
+
 pub const REQUIRED_ATTACK_FIXTURE_IDS: &[&str] = &[
     "unsupported_addition",
     "material_omission",

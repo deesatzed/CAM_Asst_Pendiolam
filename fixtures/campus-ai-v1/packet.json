@@ -1,9 +1,133 @@
 {
-  "fixture_kind": "synthetic_campus_ai_constitution_packet",
+  "schema_version": 1,
   "packet_id": "campus-ai-v1",
+  "version": 1,
   "question": "What should a university permit, require, disclose, teach, and prohibit regarding generative AI?",
-  "claim": "A policy pilot should distinguish permitted assistance from undisclosed substitution.",
-  "uncertainty": "The appropriate boundary can vary by assessment and accessibility context.",
-  "counterevidence": "Uniform disclosure rules can burden legitimate accessibility use if they lack an appeal path.",
-  "minority_concern": "Students using assistive technology need a safe appeal path."
+  "scope": {
+    "description": "Synthetic Campus AI Constitution pilot fixture.",
+    "valid_at": "2026-08-01T00:00:00Z",
+    "jurisdictions": ["synthetic-campus"],
+    "populations": ["students", "faculty", "accessibility-reviewers"],
+    "exclusions": ["institutional-policy-adoption"]
+  },
+  "status": "source_frozen",
+  "sources": [
+    {
+      "source_id": "source-assessment-integrity",
+      "title": "Synthetic assessment-integrity memorandum",
+      "content_digest": "assessment-integrity-v1",
+      "source_type": "official",
+      "retrieved_at": "2026-08-01T00:00:00Z",
+      "issuer": "Synthetic Campus",
+      "locator": null,
+      "quality_notes": "Frozen synthetic evaluation source.",
+      "limitations": ["Not a real institutional policy."]
+    },
+    {
+      "source_id": "source-accessibility",
+      "title": "Synthetic accessibility review",
+      "content_digest": "accessibility-review-v1",
+      "source_type": "research",
+      "retrieved_at": "2026-08-01T00:00:00Z",
+      "issuer": "Synthetic Accessibility Review",
+      "locator": null,
+      "quality_notes": "Frozen synthetic counterevidence source.",
+      "limitations": ["Does not measure real participants."]
+    }
+  ],
+  "claims": [
+    {
+      "claim_id": "claim-disclosure-boundary",
+      "proposition": "A policy pilot should distinguish permitted assistance from undisclosed substitution.",
+      "claim_type": "association",
+      "status": "contested",
+      "evidence_for": ["evidence-assessment"],
+      "evidence_against": ["evidence-accessibility"],
+      "applicability": "Synthetic course-assessment policy pilot.",
+      "uncertainty": {
+        "level": "moderate",
+        "reasons": ["Assessment and accessibility contexts differ."]
+      },
+      "materiality": "high"
+    }
+  ],
+  "evidence_objects": [
+    {
+      "evidence_id": "evidence-assessment",
+      "source_refs": ["source-assessment-integrity"],
+      "summary": "Disclosure can preserve independent mastery checks.",
+      "direction": "supports",
+      "limitations": ["Synthetic source only."],
+      "confidence": "medium"
+    },
+    {
+      "evidence_id": "evidence-accessibility",
+      "source_refs": ["source-accessibility"],
+      "summary": "Uniform disclosure can burden legitimate accessibility use without an appeal path.",
+      "direction": "challenges",
+      "limitations": ["Synthetic source only."],
+      "confidence": "medium"
+    }
+  ],
+  "interpretations": [
+    {
+      "interpretation_id": "interpretation-contextual-disclosure",
+      "description": "Disclosure may need context-specific rules and an appeal path.",
+      "claim_refs": ["claim-disclosure-boundary"],
+      "assumptions": ["An appeal path can be reviewed fairly."],
+      "counterarguments": ["Context-specific rules can be hard to explain."],
+      "distinguishing_tests": ["Compare comprehension across two disclosure policies."]
+    }
+  ],
+  "value_positions": [
+    {
+      "value_id": "value-independent-mastery",
+      "statement": "Assessment should retain opportunities to demonstrate independent mastery.",
+      "holder_scope": "assessment-reviewers",
+      "tensions_with": ["value-accessibility"]
+    },
+    {
+      "value_id": "value-accessibility",
+      "statement": "Policy should not penalize legitimate accessibility support.",
+      "holder_scope": "accessibility-reviewers",
+      "tensions_with": ["value-independent-mastery"]
+    }
+  ],
+  "action_options": [
+    {
+      "option_id": "action-course-pilot",
+      "action": "Run a reversible course-level disclosure and appeal pilot.",
+      "assumptions": ["The course can collect review feedback."],
+      "affected_groups": ["students", "faculty", "accessibility-reviewers"],
+      "risks": ["Confusing policy language."],
+      "reversibility": "high",
+      "success_measures": ["Accurate disclosure understanding."],
+      "stop_conditions": ["Accessibility concern cannot be addressed."]
+    }
+  ],
+  "unknowns": ["How different assessment formats change the disclosure boundary."],
+  "minority_reports": [
+    {
+      "report_id": "minority-accessibility-appeal",
+      "position": "Students using assistive technology need a safe appeal path.",
+      "evidence_refs": ["evidence-accessibility"],
+      "unresolved_risk": "Disclosure can expose a student to stigma."
+    }
+  ],
+  "transformation_contract": {
+    "allowed_profile_fields": ["language", "literacy_level", "preferred_length"],
+    "allowed_transformations": ["reading-level", "length", "ordering"],
+    "forbidden_transformations": ["unsupported-fact", "counterevidence-omission", "targeted-conclusion"],
+    "required_materiality_levels": ["high", "critical"]
+  },
+  "provenance": {
+    "manifest_digest": "synthetic-gate0-fixture-manifest",
+    "object_root": "synthetic-gate0-object-root",
+    "created_at": "2026-08-01T00:00:00Z",
+    "authors": ["Common Reality fixture authors"],
+    "reviewers": ["Common Reality fixture reviewers"],
+    "signatures": [],
+    "transparency_receipts": [],
+    "supersedes": null
+  }
 }

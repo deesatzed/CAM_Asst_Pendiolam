@@ -2,7 +2,7 @@
   "schema_version": 1,
   "corpus_id": "campus-ai-v1",
   "fixtures": [
-    {"id":"packet","path":"packet.json","sha256":"162970b297cec76e4bb6c20d49edbdc3a23da91da9134f47760a56d451f51e4c"},
+    {"id":"packet","path":"packet.json","sha256":"35ad892c0bc5c15a4a597938d5d486db9cfb931e10b7d980c665095118d9cbe7"},
     {"id":"source_corpus","path":"source-corpus.json","sha256":"a51372e6aedbb5c7bc4b920f12e955cc38c4b583666c2b32113ab3a38e660d38"},
     {"id":"expected_invariants","path":"expected-invariants.json","sha256":"54bf19e6a37610e691c5df6301c740673449d6f580c6d1c6d68be5ffe9782299"},
     {"id":"allowed_presentation_profiles","path":"allowed-presentation-profiles.json","sha256":"3a305a30501e924d52955b96efebfe89d3ad62dbb5193d392f722d25e0075b25"},
