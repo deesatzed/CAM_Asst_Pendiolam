@@ -1,4 +1,3 @@
 [workspace]
-members = ["crates/common-reality-schema"]
+members = ["crates/common-reality-schema", "crates/common-reality-canonical"]
 resolver = "2"
-
