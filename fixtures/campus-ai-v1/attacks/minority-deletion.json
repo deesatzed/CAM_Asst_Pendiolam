@@ -1,0 +1,1 @@
+{"attack_id":"minority_deletion","expected_verdict":"reject","mutates":"deletes a minority report"}

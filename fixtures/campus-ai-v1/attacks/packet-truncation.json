@@ -1,0 +1,1 @@
+{"attack_id":"packet_truncation","expected_verdict":"reject","mutates":"truncates material packet content"}

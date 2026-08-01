@@ -1,0 +1,1 @@
+{"attack_id":"forbidden_profile_use","expected_verdict":"reject","mutates":"uses hidden political profile data"}

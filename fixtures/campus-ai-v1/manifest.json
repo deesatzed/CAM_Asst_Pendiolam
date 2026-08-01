@@ -1,1 +1,21 @@
-{}
+{
+  "schema_version": 1,
+  "corpus_id": "campus-ai-v1",
+  "fixtures": [
+    {"id":"packet","path":"packet.json","sha256":"162970b297cec76e4bb6c20d49edbdc3a23da91da9134f47760a56d451f51e4c"},
+    {"id":"unsupported_addition","path":"attacks/unsupported-addition.json","sha256":"a40ddcd736b24b19825c8fad70f44b549c321db72a439306a566acd9cdc4e3d2"},
+    {"id":"material_omission","path":"attacks/material-omission.json","sha256":"74dbd8b05ab944406811cfa9ecca89a273683cbebc7e1a0ea372810b6e267668"},
+    {"id":"uncertainty_reduction","path":"attacks/uncertainty-reduction.json","sha256":"73e2a708a7093a9c3c0dfc3040e1d3ec741bd1c124ffe75e9c7f3909346cd57a"},
+    {"id":"interpretation_as_fact","path":"attacks/interpretation-as-fact.json","sha256":"27f7e526e4ca3f034409744d2ffd523cd56a468e694125b3143c6a5739e525e2"},
+    {"id":"value_as_evidence","path":"attacks/value-as-evidence.json","sha256":"f58ddb0a0cc02f201f7e795c8d6680018d49eeb2fe4004a50ea39f6cd91f9c87"},
+    {"id":"forbidden_profile_use","path":"attacks/forbidden-profile-use.json","sha256":"2fd615ec330acc7b556c0b1e2b4034635e96b20f127751b7814e03b8aed67e73"},
+    {"id":"stakeholder_omission","path":"attacks/stakeholder-omission.json","sha256":"c7b1e5a5b76d251b425de5d29cc119da986924a549ccc97ad5cb037c05752b13"},
+    {"id":"source_laundering","path":"attacks/source-laundering.json","sha256":"ffea4791183521ae6e4d5a654a18d2f1b51346b1c7f822625013c006a49e22ad"},
+    {"id":"stale_packet","path":"attacks/stale-packet.json","sha256":"0a918e3d164cf6f3e1d3f9594d01ba212ae0d93daed73552c73e87fcb0431b3e"},
+    {"id":"minority_deletion","path":"attacks/minority-deletion.json","sha256":"e066740243ff1ba5418eaf78754beb7f4cd3d11853e6388fae38b583dd0ed982"},
+    {"id":"model_collusion","path":"attacks/model-collusion.json","sha256":"bf32b5c7549dc635662e2977344f0a8e505a9fc57f5f470290fdbc8eb705de6d"},
+    {"id":"prompt_injection","path":"attacks/prompt-injection.json","sha256":"762903167db42f3a1ba33180a2c599f28e95e2cc949f38d6524da662758e98d2"},
+    {"id":"packet_truncation","path":"attacks/packet-truncation.json","sha256":"16bb1155b57dd640e11056279e0d80471456484dda8f2c0ffdf0577eccaafe78"},
+    {"id":"false_transparency_receipt","path":"attacks/false-transparency-receipt.json","sha256":"8482ef0e81752a8f760b501b47ea4cbb3adea027eec27c0b0831c3e4a63d3a4a"}
+  ]
+}

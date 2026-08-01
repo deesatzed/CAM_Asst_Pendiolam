@@ -1,0 +1,9 @@
+{
+  "fixture_kind": "synthetic_campus_ai_constitution_packet",
+  "packet_id": "campus-ai-v1",
+  "question": "What should a university permit, require, disclose, teach, and prohibit regarding generative AI?",
+  "claim": "A policy pilot should distinguish permitted assistance from undisclosed substitution.",
+  "uncertainty": "The appropriate boundary can vary by assessment and accessibility context.",
+  "counterevidence": "Uniform disclosure rules can burden legitimate accessibility use if they lack an appeal path.",
+  "minority_concern": "Students using assistive technology need a safe appeal path."
+}

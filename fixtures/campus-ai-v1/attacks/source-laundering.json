@@ -1,0 +1,1 @@
+{"attack_id":"source_laundering","expected_verdict":"reject","mutates":"relabels unsupported content as a source"}

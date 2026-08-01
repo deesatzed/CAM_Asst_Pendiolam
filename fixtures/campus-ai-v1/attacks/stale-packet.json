@@ -1,0 +1,1 @@
+{"attack_id":"stale_packet","expected_verdict":"reject","mutates":"uses a superseded packet version"}
