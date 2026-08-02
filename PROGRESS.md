@@ -17,11 +17,19 @@ Execute `GOAL_Gate2.md` in the standalone Common Reality repository.
 
 | Batch | Status | Evidence |
 |---|---|---|
-| Reconnaissance and plan | in progress | `REPO_MAP.md`, `RISK_NOTES.md`, `docs/plans/2026-08-01-common-reality-gate2-packet-studio.md` |
+| Reconnaissance and plan | complete | `REPO_MAP.md`, `RISK_NOTES.md`, `docs/plans/2026-08-01-common-reality-gate2-packet-studio.md` |
+| Generic canonical JSON identity helper | complete | Commit `65a0fda`; focused test plus full workspace baseline passed |
 | Typed Rust Packet Studio core | pending | — |
 | Publication/reconstruction proof | pending | — |
 | React/TypeScript surface | pending | — |
 | Aggregate Gate 2 evidence | pending | — |
+
+## Published Checkpoint
+
+- Commit `2d45705` (pushed to `origin/main`) adds the README, repository map,
+  risk notes, Gate 2 plan, decisions, and progress truth.
+- Gate 2 is not complete. No Packet Studio crate, web app, verifier, or saved
+  Gate 2 evidence receipt exists yet.
 
 ## Constraints Held
 

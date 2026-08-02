@@ -1,0 +1,18 @@
+[package]
+name = "common-reality-studio"
+version = "0.1.0"
+edition = "2021"
+license = "Apache-2.0"
+publish = false
+
+[dependencies]
+common-reality-canonical = { path = "../common-reality-canonical" }
+common-reality-ledger = { path = "../common-reality-ledger" }
+common-reality-policy = { path = "../common-reality-policy" }
+common-reality-schema = { path = "../common-reality-schema" }
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
+sha2 = "0.10"
+
+[dev-dependencies]
+tempfile = "3.13"
