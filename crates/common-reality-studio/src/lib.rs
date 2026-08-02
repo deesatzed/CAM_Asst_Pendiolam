@@ -657,6 +657,13 @@ impl PacketStudioDraft {
             |kind: &str, id: &str| known.get(kind).is_some_and(|values| values.contains(id));
         let mut visible_counterevidence_for: BTreeSet<String> = BTreeSet::new();
         for object in &self.objects {
+            if let TypedObject::Counterevidence(counterevidence) = object {
+                if counterevidence.visible {
+                    visible_counterevidence_for.extend(counterevidence.claim_refs.iter().cloned());
+                }
+            }
+        }
+        for object in &self.objects {
             match object {
                 TypedObject::Source(source) => {
                     if source.source_id.is_empty()

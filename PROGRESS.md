@@ -19,8 +19,8 @@ Execute `GOAL_Gate2.md` in the standalone Common Reality repository.
 |---|---|---|
 | Reconnaissance and plan | complete | `REPO_MAP.md`, `RISK_NOTES.md`, `docs/plans/2026-08-01-common-reality-gate2-packet-studio.md` |
 | Generic canonical JSON identity helper | complete | Commit `65a0fda`; focused test plus full workspace baseline passed |
-| Typed Rust Packet Studio core | pending | — |
-| Publication/reconstruction proof | pending | — |
+| Typed Rust Packet Studio core | complete | `crates/common-reality-studio`; source/import, tagged objects, and fail-closed review tests pass |
+| Publication/reconstruction proof | complete | immutable versions, deterministic diff, local receipt, and corruption tests pass |
 | React/TypeScript surface | pending | — |
 | Aggregate Gate 2 evidence | pending | — |
 
