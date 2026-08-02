@@ -23,7 +23,7 @@ Execute `GOAL_Gate2.md` in the standalone Common Reality repository.
 | Publication/reconstruction proof | complete | immutable versions, deterministic diff, local receipt, and corruption tests pass |
 | Executable Rust Gate 2 verifier | complete | `scripts/verify-gate2.sh`; partial evidence saved in `docs/evidence/gate-2-packet-studio.md` |
 | React/TypeScript surface | complete | `apps/web`; local source/typed editors, review blockers, receipt, reconstruction, diff, and 2 Vitest UI/model tests |
-| Aggregate Gate 2 evidence | pending | — |
+| Aggregate Gate 2 evidence | complete | `docs/evidence/gate-2-packet-studio.md`; final Rust/web/verifier/audit proof set passed |
 
 ## Published Checkpoint
 
