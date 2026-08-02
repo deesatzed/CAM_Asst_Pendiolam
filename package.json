@@ -1,0 +1,7 @@
+{
+  "name": "common-reality",
+  "private": true,
+  "workspaces": [
+    "apps/web"
+  ]
+}
