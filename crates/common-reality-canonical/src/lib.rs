@@ -17,7 +17,7 @@ impl std::error::Error for CanonicalizationError {}
 
 pub fn content_id(packet_json: &str) -> Result<String, CanonicalizationError> {
     let canonical = canonical_json(packet_json)?;
-    Ok(format!("sha256:{:x}", Sha256::digest(canonical)))
+    Ok(content_id_bytes(&canonical))
 }
 
 pub fn canonical_json(packet_json: &str) -> Result<Vec<u8>, CanonicalizationError> {
@@ -25,8 +25,28 @@ pub fn canonical_json(packet_json: &str) -> Result<Vec<u8>, CanonicalizationErro
         .map_err(|error| CanonicalizationError(format!("invalid packet: {error}")))?;
     let value: Value = serde_json::from_str(packet_json)
         .map_err(|error| CanonicalizationError(format!("invalid JSON: {error}")))?;
-    serde_json::to_vec(&canonicalize(value))
+    Ok(canonical_json_value(&value))
+}
+
+/// Serializes any JSON value with recursively sorted object keys.
+///
+/// Gate 2 uses this helper for typed object and manifest identities that are
+/// not themselves legacy Shared Reality Packets. The existing `content_id`
+/// function remains the validating entry point for packet identities.
+pub fn canonical_json_value(value: &Value) -> Vec<u8> {
+    serde_json::to_vec(&canonicalize(value.clone()))
         .map_err(|error| CanonicalizationError(format!("cannot encode canonical JSON: {error}")))
+        .expect("serde_json::Value is serializable")
+}
+
+/// Computes a stable content identity for any canonical JSON value.
+pub fn content_id_value(value: &Value) -> String {
+    content_id_bytes(&canonical_json_value(value))
+}
+
+/// Computes a SHA-256 content identity for already canonical bytes.
+pub fn content_id_bytes(bytes: &[u8]) -> String {
+    format!("sha256:{:x}", Sha256::digest(bytes))
 }
 
 fn canonicalize(value: Value) -> Value {
