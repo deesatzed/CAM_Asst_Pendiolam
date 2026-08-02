@@ -21,3 +21,10 @@ The React/TypeScript surface renders deterministic local synthetic data and
 failure states. It does not publish packets, call models, infer truth, or use
 network credentials; the Rust proof path remains authoritative for review and
 reconstruction claims.
+
+## 2026-08-02: Landing page is the default route; Packet Studio is explicit
+
+The default web route will explain the product, verified Gate 2 boundary, and
+deferred roadmap. The Packet Studio remains reachable through an explicit
+hash-based studio entry point so product education does not hide the
+inspectable workflow or imply that later gates are already implemented.

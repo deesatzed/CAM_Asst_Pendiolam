@@ -1,12 +1,27 @@
 import { describe, expect, it } from "vitest";
 import { renderToStaticMarkup } from "react-dom/server";
 import { App } from "../src/App";
+import { LandingPage } from "../src/LandingPage";
 import {
   blockedGate2Model,
   gate2Model,
   requiredTypedKinds,
   reviewSummary,
 } from "../src/studioModel";
+
+describe("Common Reality product landing page", () => {
+  it("states the evidence boundary and exposes the explicit studio entry point", () => {
+    const html = renderToStaticMarkup(<LandingPage />);
+
+    expect(html).toContain("Evidence over persuasion");
+    expect(html).toContain("Shared Reality Packets");
+    expect(html).toContain("Open Packet Studio");
+    expect(html).toContain('href="#studio"');
+    expect(html).toContain("Gate 2 verified");
+    expect(html).toContain("Gates 3–10 deferred");
+    expect(html).not.toContain("truth score");
+  });
+});
 
 describe("Packet Studio inspection surface", () => {
   it("renders the local source-frozen packet and every typed section", () => {
